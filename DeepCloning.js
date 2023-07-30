@@ -3,9 +3,10 @@ function deepCopy(obj) {
 
     for (const key in obj) {
       const value = obj[key];
-      if (key && Array.isArray(value)) {
+
+      if (Array.isArray(value)) {
         objCopy[key] = value.slice();
-      } else if (key && typeof value === 'object') {
+      } else if (!!value && typeof value === 'object') {
         objCopy[key] = deepCopy(value);
       } else {
         objCopy[key] = value;
