@@ -16,23 +16,18 @@ function deepCopy(obj) {
     return objCopy;
   };
 
-  const person = {
-  firstName: "John",
-  lastName: "Doe",
+const student = {
+  firstName: 'John',
+  lastName: 'Doe',
   age: 30,
-  email: "john.doe@example.com",
+  email: 'john.doe@example.com',
   address: {
-    city: "New York",
-    country: "USA",
-    zipCode: "10001"
-    },
+    city: 'New York',
+    country: 'USA',
+    zipCode: '10001'
+  },
+  isStudent: true,
   subjects: ['Math', 'History', 'English'],
-  isStudent: false,
-  sayHello: function() {
-    return `Hello, my name is ${this.firstName} ${this.lastName}.`;
-  }
-  };
+};
 
-  const newPerson = deepCopy(person);
-
-  console.log(newPerson);
+console.log(deepCopy(student));
