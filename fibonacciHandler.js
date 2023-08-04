@@ -1,4 +1,4 @@
-function positionReceiver(position: number) {
+function fibonacciHandler(position: number) {
   if (position === 0) {
     return 0;
   }
@@ -14,4 +14,19 @@ function positionReceiver(position: number) {
   return currentNum;
 }
 
-console.log(positionReceiver(7));
+console.log(fibonacciHandler(9)); //34
+
+// function fibonacciHandler(position: number) {
+//   if (position === 0) {
+//     return 0;
+//   }
+
+//   let prevNum = 0;
+//   let currentNum = 1;
+
+//   for (let i = 2; i <= position; i++) {
+//     [prevNum, currentNum] = [currentNum, prevNum + currentNum];
+//   }
+
+//   return currentNum;
+// }
