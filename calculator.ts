@@ -1,5 +1,4 @@
 interface ArithmeticOperations {
-  value: number;
   toAdd: (value: number) => this;
   toSubtract: (value: number) => this;
   toMultiply: (value: number) => this;
@@ -7,22 +6,15 @@ interface ArithmeticOperations {
 }
 
 interface AdvancedOperations {
-  power: number;
   toSquare: () => this;
   toCube: () => this;
   toPower: (power: number) => this;
 }
 
 class Calculator implements ArithmeticOperations, AdvancedOperations {
-  value: number;
-
-  power: number;
-
   currentResult: number;
 
-  constructor(value = 0, power = 1) {
-    this.value = value;
-    this.power = power;
+  constructor(value = 0) {
     this.currentResult = value;
   }
 
@@ -46,13 +38,13 @@ class Calculator implements ArithmeticOperations, AdvancedOperations {
     return this;
   }
 
-  toSquare(power = 2): this {
-    this.currentResult **= power;
+  toSquare(): this {
+    this.currentResult **= 2;
     return this;
   }
 
-  toCube(power = 3): this {
-    this.currentResult **= power;
+  toCube(): this {
+    this.currentResult **= 3;
     return this;
   }
 
