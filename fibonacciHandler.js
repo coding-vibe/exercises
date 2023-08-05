@@ -1,4 +1,10 @@
-function fibonacciHandler(position: number) {
+const fibonacciCache = {};
+
+function fibonacciHandler(position) {
+  if (fibonacciCache[position]) {
+    return fibonacciCache[position];
+  }
+
   if (position === 0) {
     return 0;
   }
@@ -11,9 +17,11 @@ function fibonacciHandler(position: number) {
     prevNum = currentNum;
     currentNum = nextNum;
   }
+  fibonacciCache[position] = currentNum;
   return currentNum;
 }
 
+console.log(fibonacciHandler(9)); //34
 console.log(fibonacciHandler(9)); //34
 
 // function fibonacciHandler(position: number) {
