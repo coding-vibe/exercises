@@ -11,6 +11,10 @@ interface AdvancedOperations {
   toPower: (power: number) => this;
 }
 
+interface CalculatorConstructor {
+  new (currentResult: number): Calculator;
+}
+
 class Calculator implements ArithmeticOperations, AdvancedOperations {
   currentResult: number;
 

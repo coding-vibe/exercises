@@ -24,7 +24,7 @@ function fibonacciHandler(position) {
 console.log(fibonacciHandler(9)); //34
 console.log(fibonacciHandler(9)); //34
 
-// function fibonacciHandler(position: number) {
+// function fibonacciHandler(position) {
 //   if (position === 0) {
 //     return 0;
 //   }
