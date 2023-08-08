@@ -10,7 +10,7 @@ function debounce(func, delay) {
     }
   };
 
-  return debouncedFunction();
+  return debouncedFunction;
 }
 
 function showDate() {
@@ -19,4 +19,3 @@ function showDate() {
 }
 
 console.log(debounce(showDate, 1000));
-console.log(debounce(showDate, 10000));
