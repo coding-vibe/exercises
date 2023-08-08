@@ -1,10 +1,8 @@
-let ITERATION = 1;
-
 function debounce(func, delay) {
   let timeoutID;
+
   const debouncedFunction = () => {
-    if (ITERATION === 1) {
-      ITERATION += 1;
+    if (!timeoutID) {
       timeoutID = setTimeout(func, delay);
     } else {
       clearTimeout(timeoutID);
