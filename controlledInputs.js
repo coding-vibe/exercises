@@ -3,11 +3,11 @@ import React, { useState } from 'react';
 function ControlledInputs() {
     const [checked, setChecked] = useState(false);
     const [option, setOption] = useState('Not done');
-    const handleCheckboxChange = ({ target}) => {
-        setChecked(target.checked);
+    const handleCheckboxChange = (event) => {
+        setChecked(event.target.checked);
     };
-    const handleRadioChange = ({ target}) => {
-        setOption(target.value);
+    const handleRadioChange = (event) => {
+        setOption(event.target.value);
     };
 
     return (
