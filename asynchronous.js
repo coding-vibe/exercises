@@ -1,4 +1,16 @@
 // Task: prepare a code example that promisifies callback handler
+const promisify =
+  (fn) =>
+  (...args) =>
+    new Promise((resolve, reject) => {
+      fn(...args, (err, result) => {
+        if (err) {
+          reject(err);
+        } else {
+          resolve(result);
+        }
+      });
+    });
 
 // Task: prepare a code that checks is a request fulfilled in 2 sec
 const promise = new Promise((resolve, reject) => {
