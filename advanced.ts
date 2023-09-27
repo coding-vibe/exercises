@@ -7,7 +7,7 @@ type Type = {
     married: boolean;
 }
 
-type MyObject = {
+type ObjectTypeWithFixedKeys = {
     [Property in keyof Type]: Type[Property];
 }
 
