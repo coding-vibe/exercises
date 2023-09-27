@@ -13,9 +13,11 @@ type MyObject = {
 
 // Task - create a union type from object values:
 const myObject = {
-    number: 1,
-    string: '2',
-    boolean: true,
-}
+    age: 1,
+    name: '2',
+    married: true,
+} as const
 
-type ObjectValuesBased = keyof typeof myObject;
+type ObjectType = typeof myObject;
+type ObjectKeysType = keyof ObjectType;
+type ObjectValuesType = ObjectType[ObjectKeysType];
