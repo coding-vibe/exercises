@@ -13,10 +13,9 @@ const promisify =
     });
 
 // Task: prepare a code that checks is a request fulfilled in 2 sec
-
 type MyPromise = typeof myPromise;
 
-async function promiseChecker (myPromise: MyPromise, delay: number) {
+async function promiseChecker(myPromise: MyPromise, delay: number): Promise<boolean> {
   const testPromise = () => new Promise((resolve) => {
     setTimeout(() => {
       resolve('Successful result');
@@ -24,7 +23,7 @@ async function promiseChecker (myPromise: MyPromise, delay: number) {
   });
 
   return Promise.race([myPromise, testPromise])
-    .then((value) => value === 'Successful result' ? false : true);
+    .then((value) => value === 'Successful result' ? !value : true);
 }
 
 // Task: rewrite code from one styles to another
