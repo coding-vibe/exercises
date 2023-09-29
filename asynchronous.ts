@@ -12,7 +12,7 @@ const promisify =
       });
     });
 
-// Task: prepare a code that checks is a request fulfilled in 2 se
+// Task: prepare a code that checks is a request fulfilled in 2 sec
 
 type MyPromise = typeof myPromise;
 
