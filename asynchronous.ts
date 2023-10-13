@@ -13,17 +13,18 @@ const promisify =
     });
 
 // Task: prepare a code that checks is a request fulfilled in 2 sec
-type MyPromise = typeof myPromise;
+function promiseChecker<T>(
+  myPromise: Promise<T>,
+  delay: number
+): Promise<boolean> {
+  const testPromise = () =>
+    new Promise((resolve) => {
+      setTimeout(() => {
+        resolve("Successful result");
+      }, delay);
+    });
 
-async function promiseChecker(myPromise: MyPromise, delay: number): Promise<boolean> {
-  const testPromise = () => new Promise((resolve) => {
-    setTimeout(() => {
-      resolve('Successful result');
-    }, delay);
-  });
-
-  return Promise.race([myPromise, testPromise])
-    .then((value) => value === 'Successful result' ? !value : true);
+  return Promise.race([myPromise, testPromise]).then(
+    (value) => value === "Successful result"
+  );
 }
-
-// Task: rewrite code from one styles to another
