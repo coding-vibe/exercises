@@ -28,3 +28,5 @@ function promiseChecker<T>(
     (value) => value === "Successful result"
   );
 }
+
+// Async await from callback hell

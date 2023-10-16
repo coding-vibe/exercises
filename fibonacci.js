@@ -1,6 +1,6 @@
 const fibonacciCache = {};
 
-function fibonacciHandler(position) {
+function fibonacci(position) {
   if (fibonacciCache[position]) {
     return fibonacciCache[position];
   }
