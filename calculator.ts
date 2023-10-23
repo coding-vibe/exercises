@@ -64,12 +64,14 @@ class Calculator implements ArithmeticOperations, AdvancedOperations {
 
 const myCalculator = new Calculator(1);
 
-console.log(myCalculator
-  .toAdd(20)
-  .toSubtract(10)
-  .toMultiply(10)
-  .toDivide(5)
-  .toSquare()
-  .toCube()
-  .toPower(10)
-  .getResult());
+console.log(
+  myCalculator
+    .toAdd(20)
+    .toSubtract(10)
+    .toMultiply(10)
+    .toDivide(5)
+    .toSquare()
+    .toCube()
+    .toPower(10)
+    .getResult()
+);
