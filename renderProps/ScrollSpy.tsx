@@ -7,7 +7,7 @@ interface Props {
 
 const DELAY = 100;
 
-export default function ScrolledArea({ renderContent }: Props) {
+export default function ScrolledSpy({ renderContent }: Props) {
   const [scrollY, setScrollY] = useState<number>(0);
 
   useEffect(() => {
