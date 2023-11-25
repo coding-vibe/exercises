@@ -7,5 +7,5 @@ const usePrevious = (value) => {
         previousValue.current = value;
     }, [value]);
 
-    return previousValue;
+    return previousValue.current;
 };
