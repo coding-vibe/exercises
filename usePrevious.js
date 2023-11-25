@@ -1,6 +1,6 @@
 import { useEffect, useRef } from 'react';
 
-const previousStateTracker = (value) => {
+const usePrevious = (value) => {
     const previousValue = useRef();
 
     useEffect(() => {
